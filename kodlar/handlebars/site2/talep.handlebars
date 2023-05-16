@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AltyapıGözlem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/iletisim.css"> <!-- iletisim css dosyasindan style bilgilerini aliyoruz -->
+    </head> 
+    <body>
+
+        <h3>GÖZLEMLETMEK İSTEDİĞİNİZ MAÇINIZ</h3> <!-- baslik tanimladim -->
+        
+        <div class="container">
+          <form action="/talepEkle" method="POST" > 
+            <label for="ad">Adınız: </label>
+            <input type="text" name="ad" placeholder="Adınızı girin...">
+        
+            <label for="soyad">Soyadınız: </label>
+            <input type="text" name="soyad" placeholder="Soyadınızı girin...">
+            
+        
+            <label for="mesaj">Mesajınız: </label>
+            <textarea name="mesaj" placeholder="Maçın yeri ve tarihi" style="height:200px"></textarea>
+        
+            <input type="submit" value="Gönder">
+          </form>
+        </div>
+    </body>
+</html>

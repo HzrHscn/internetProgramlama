@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>AltyapıGözlem</title>
+        <link rel="stylesheet" href="css/kayitstyle.css">
+    </head>
+    <body>
+        <form action="/kayitol.php" style="border:1px solid #ccc">
+            <div class="container">
+              <h1>Kayıt Ol</h1>
+              <p>Lütfen aşağıdaki formu doldurunuz.</p>
+              <hr>
+
+              <label for="Ad"><b>Ad</b></label>
+              <input type="text" placeholder="Adınızı girin:" name="Ad" required>
+
+              <label for="Soyad"><b>Soyad</b></label>
+              <input type="text" placeholder="Soyadınızı girin:" name="Soyad" required>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Email adresinizi girin:" name="email" required>
+          
+              <label for="psw"><b>Şifre</b></label>
+              <input type="password" placeholder="Şifrenizi girin: " name="sifre" required>
+          
+              <label for="psw-repeat"><b>Şifre Tekrar</b></label>
+              <input type="password" placeholder="Şifrenizi tekrar girin: " name="sifretekrar" required>
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Beni Hatırla
+              </label>
+              
+          
+              <div class="clearfix">
+                <button type="button" class="cancelbtn">İptal</button>
+                <button type="submit" class="signupbtn">Kayıt</button>
+              </div>
+            </div>
+          </form>
+    </body>
+</html>

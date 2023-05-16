@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AltyapıGözlem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+        <link rel="stylesheet" href="/css/futbolcu.css" >
+    </head>
+    
+
+        <div class="tablolar">
+        
+            <p>
+                <form>
+                    <label>Arama Kutusu:  </label>
+                    <form action="" name="aramakutusu" method="post"> 
+                    <input type="text" name="Ad" placeholder="Adı: "/>
+                    <input type="submit" name="gonder" value="Ara"/> 
+                    
+                </form>
+                
+            </p>
+            <table id="tablo1"class="table table-bordered">
+                <thead>
+                    <tr>
+                    <th><font size="+2">Ad </font></th>
+                    <th><font size="+2">Soyad </font> </th>
+                    <th><font size="+2">Yaş</font></th>
+                    <th><font size="+2">Mevki</font></th>
+                    <th><font size="+2">Yaşadığı Yer</font></th>
+                    <th><font size="+2">Boy(cm)</font></th>
+                    <th><font size="+2">Kilo(kg)</font></th>
+                    <th><font size="+2"><details></details></font></th>
+                    </tr>
+                </thead>
+                <tbody>
+  {{#each futbolcus}}  
+                    
+                    <form action="/futbolcuEkle" method="POST">
+                        <td><input type="text" name="fad" placeholder="Ad"></td>
+                        <td><input type="text" name="fsoyad" placeholder="Soyad"></td>
+                        <td><input type="number" name="fyaş" placeholder="Yaş"></td>
+                        <td><input type="text" name="fmevki" placeholder="Mevki"></td>
+                        <td><input type="text" name="fyer" placeholder="Yer"></td>
+                        <td><input type="number" name="fboy" placeholder="Boy"></td>
+                        <td><input type="number" name="fkilo" placeholder="Kilo"></td>
+                        <td><input type="text" name="fvideo" placeholder="Video link"></td>
+                        <td><button type="submit">
+                            OYUNCU EKLE
+                        </button></td>
+                    </form>
+                        <tr>
+                            <td>{{fad}}</td>
+                            <td>{{fsoyad}}</td>
+                            <td>{{fyaş}}</td>
+                            <td>{{fmevki}}</td>
+                            <td>{{fyer}}</td>
+                            <td>{{fboy}}</td>
+                            <td>{{fkilo}}</td>
+                            <td>{{fvideo}}</td>
+                        </tr>   
+                    <tr>
+                        <td>Gedson</td>
+                        <td>Fernandes</td>
+                        <td>23</td>
+                        <td>Ortasaha</td>
+                        <td>İstanbul</td>
+                        <td>180</td>
+                        <td>73</td>
+                        <td><a href="profil.handlebars">profil</td>
+                    </tr>
+                    <tr>
+                        <td>Anderson</td>
+                        <td>Talisca</td>
+                        <td>28</td>
+                        <td>Ortasaha</td>
+                        <td>Al ahly</td>
+                        <td>185</td>
+                        <td>76</td>
+                        <td>frikik üstadi</td>
+                    </tr>
+                    <tr>
+                        <td>Ersin</td>
+                        <td>Destanoğlu</td>
+                        <td>20</td>
+                        <td>Kaleci</td>
+                        <td>İstanbul</td>
+                        <td>195</td>
+                        <td>85</td>
+                        <td>penaltı canavari</td>
+                    </tr> 
+                    <tr>
+                        <td>Arda</td>
+                        <td>Güler</td>
+                        <td>17</td>
+                        <td>Ortasaha</td>
+                        <td>İstanbul</td>
+                        <td>176</td>
+                        <td>70</td>
+                        <td>wonderkid</td>
+                    </tr>
+                    <tr>
+                        <td>Rıdvan</td>
+                        <td>Yılmaz</td>
+                        <td>20</td>
+                        <td>Defans</td>
+                        <td>İstanbul</td>
+                        <td>174</td>
+                        <td>67</td>
+                        <td>teknik solbek</td>
+                    </tr>
+                    <tr>
+                        <td>Emirhan</td>
+                        <td>İlkhan</td>
+                        <td>17</td>
+                        <td>Ortasaha</td>
+                        <td>İstanbul</td>
+                        <td>175</td>
+                        <td>68</td>
+                        <td>wonderkid</td>
+                    </tr>
+                    <tr>
+                        <td>Serdar</td>
+                        <td>Saatçi</td>
+                        <td>19</td>
+                        <td>Defans</td>
+                        <td>İstanbul</td>
+                        <td>190</td>
+                        <td>80</td>
+                        <td>Uzun boylu stoper</td>
+                    </tr>
+                    <tr>
+                        <td>Can</td>
+                        <td>Bozdogan</td>
+                        <td>20</td>
+                        <td>Ortasaha</td>
+                        <td>İstanbul</td>
+                        <td>174</td>
+                        <td>72</td>
+                        <td>boxtobox genc</td>
+                    </tr>
+                    <tr>
+                        <td>Yunus</td>
+                        <td>Akgün</td>
+                        <td>21</td>
+                        <td>Hücum</td>
+                        <td>Adana</td>
+                        <td>173</td>
+                        <td>?</td>
+                        <td>yetenekli kanat</td>
+                    </tr>
+                    <tr>
+                        <td>Ahmetcan</td>
+                        <td>Kaplan</td>
+                        <td>19</td>
+                        <td>Defans</td>
+                        <td>Trabzon</td>
+                        <td>189</td>
+                        <td>80(?)</td>
+                        <td>wonderkid</td>
+                    </tr>
+                    
+                {{else}}
+    <p>Gösterecek futbolcu yok, hata! </p>
+  {{/each}}
+</tbody>
+            </table>
+            
+        </div>   
+        
+        <script>
+            $(document).ready(function() {
+                $("#tablo1").dataTable();
+            } );
+        </script> 
+    </body>
+</html>
